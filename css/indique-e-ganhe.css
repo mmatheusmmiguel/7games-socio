@@ -7,7 +7,6 @@ html, body {
     box-sizing: border-box;
 }
 
-
 html {
   scroll-behavior: smooth;
 }
@@ -49,6 +48,7 @@ main {
     max-width: 1400px;
     margin: 0 auto;
 }
+
 
 
 ul, li, p {
@@ -175,16 +175,33 @@ p {
 }
 
 .referContainer {
-    height: 500px;
+    /* height: 500px; */
     width: 100%;
-    background-image: url('../assets/Banner-Indique-e-Ganhe.png');
+    /* background-image: url('../assets/indique-e-ganhe/Banner-Indique-e-Ganhe\ \(1\).png'); */
+    background: linear-gradient(45deg, #000000f3, #000000f3), url('../assets/indique-e-ganhe/Banner-Indique-e-Ganhe\ \(1\).png');
     background-repeat: no-repeat, no-repeat;
-    background-position: center;
-    background-size: contain;
+    background-position: center center;
+    background-size: cover;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-top: 40px;
+    border-radius: 15px;
+    border-style: groove;
+    border-width: 1px;
+}
+
+#indicateBronze{
+    border-color: #cd7f3287;
+}
+
+#indicateSilver{
+    border-color: #c0c0c080;
+}
+
+#indicateGold{
+    border-color: #ffe60f87;
+    margin-bottom: 14px;
 }
 
 .patner7G{
@@ -196,8 +213,16 @@ p {
 }
 
 .containerLeft {
-    width: 30%;
+    width: 50%;
     height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.containerLeft img{
+    max-width: 100%;
+    height: auto;
 }
 
 .containerRight {
@@ -205,21 +230,28 @@ p {
     flex-direction: column;
     justify-content: center;
     margin-left: 20px;
-    width: 30%;
+    width: 50%;
     height: 100%;
+    margin: 0 44px 0 0;
+    padding: 0 63px 0 0;
 }
    
 .containerRight h1{
     font-weight: bold;
-    font-size: 32px;
+    font-size: 42px;
+    padding: 0;
+    margin: 0;
 }
 
 .containerRight p{
     font-weight: 200;
+    padding-right: 42px;
 }
 
 .containerRight button {
+    font-size: 16px;
     width: 90%;
+    max-width:260px;
     height: 50px;
 }
 
@@ -295,10 +327,6 @@ hr {
 
 @media screen and (max-width: 1000px) {
  
-    .containerLeft {
-        display: none;
-    }
-
     .topPartners {
         margin: 0;
         display: flex;
@@ -339,16 +367,16 @@ hr {
     }
 
     .referContainer {
-        z-index: 1001;
-        background-image: url('../assets/Mobile-Indique.png');
-        background-size: cover;
-        background-position: center;
+        display: flex;
+        justify-content: space-between;
+        z-index: 1000;
+        /* background-image: url('../assets/Mobile-Indique.png'); */
+        /* background-size: cover;
+        background-position: center; */
         border-radius: 2%;
         margin-top: 20px;
-
-        overflow: hidden;
         border-style: solid;
-        border-color: #CCE071;
+        overflow: hidden;
     }
 
     .patner7G{
@@ -365,6 +393,8 @@ hr {
         width: 80%;
         text-align: center;
         align-items: center;
+        margin: 0;
+        padding: 0;
     }
 
     .containerRight button {
@@ -458,19 +488,11 @@ hr {
             display: none;
         }
 
-        .footer{
-            padding: 0;
-            display: flex;
+        .referContainer{
             flex-wrap: wrap;
+            align-content: center;
             justify-content: center;
             text-align: center;
-            gap: 12px;
-        }
-
-        .footer div{
-            display: flex;
-            flex-direction: column;
-            margin-bottom: 20px;
         }
 
         .firstSection{
@@ -491,12 +513,21 @@ hr {
             font-weight: 800;
         }
 
-        h1.help{
-            font-size: 32px;
+        .containerLeft{
+            width: 90%;
+        }
+
+        .containerRight h1{
+            font-size: 26px;
+        }
+
+        .containerRight p{
+           margin: 0;
+           padding: 0;
         }
 
         .containerRight button{
-            width: 80%;
+            width: 100%;
         }
 
         .registerBtn{

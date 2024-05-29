@@ -1,44 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/style.css">
-    <title>Sócio Afiliados 7Games &#8211; Vem ganhar junto!</title>
-
+    <link rel="shortcut icon" href="../assets/fav.jpg" type="image/x-icon">
+    <title>Sócios Afiliados 7Games &#8211; Vem ganhar junto!</title>
 </head>
-
 <body>
     <header class="header">
-        <a href=""><img class="logo ml" src="../assets/logo.png" alt=""></a>
+        <a href="#" aria-label="Logo da 7Games">
+            <img class="logo" src="../assets/logo.png" alt="Logotipo da 7Games">
+        </a>
 
-       <nav class="nav">
-            <ul>
-                <li><a href="#topSocios">Indique e Ganhe</a></li>
-                <li><a href="#">Sócio 7G</a></li>
-                <li><a href="#">Sócio Influencer</a></li>
-                <li><a href="#">Login</a></li>
+        <nav id="nav">
+            <ul id="menu">
+                <li><a href="#indicate">Indique e Ganhe</a></li>
+                <li><a href="#patner7G">Sócio 7G</a></li>
+                <li><a href="#patnerInfluence">Sócio Influencer</a></li>
+                <li><a href="https://socio.7games.bet/login">Login</a></li>
             </ul>
-       </nav>
+        </nav>
 
-       <button class="button cadastroBtn">Faça seu cadastro!</button>
+        <button id="toggleMenu" aria-label="Menu">
+            <img src="../assets/menu.png" alt="Menu">
+        </button>
+    
+        <a href="#indicate">
+            <button class="button registerBtn">Faça seu cadastro!</button>
+        </a>
     </header>
-
     
     <main>
         <section class="firstSection">
-            <div class="homeTextContainer ml">
-                <h1>MAIS DO QUE JOGAR JUNTO, <br><span class="spanH1">GANHAR JUNTO!</span></h1>
+            <div class="homeTextContainer">
+                <h1>MAIS DO QUE JOGAR JUNTO, <br><span class="span-h1">GANHAR JUNTO!</span></h1>
                 <p>Ajude a 7G a chegar mais longe e ganhe dinheiro com isso. <strong>Escola o plano</strong>
-                que combina mais vom você e <strong>se torne</strong> um <strong>Sócio 7G.</strong>
+                que combina mais com você e <strong>se torne</strong> um <strong>Sócio 7G.</strong>
                 </p>
                 <button class="button">
                     Entre para o time!
                 </button>
             </div>
            
-            <div class="homeResults mr">
-                <img src="../assets/resultados.png" alt="">
+            <div class="homeResults">
+                <img src="../assets/resultados.png" alt="Resultados da 7Games">
             </div>
         </section>
 
@@ -46,41 +55,40 @@
             <div class="howItWorks">
                 <div>
                     <h1 class="text-center">COMO FUNCIONA <br></h1>
-                    <span class="spanH1">NA PRÁTICA</span>
+                    <span class="span-h1">NA PRÁTICA</span>
                 </div>
 
-                <img class="passoApasso" src="../assets/Passo-a-Passo.png" alt="">
+                <img class="stepBystep" src="../assets/Passo-a-Passo.png" alt="Passo a passo">
 
                 <div class="slideshow-container">
-
                     <div class="mySlides fade">
-                      <img src="../assets/Passo-01.png" style="width:100%">
+                      <img src="../assets/Passo-01.png" style="width:100%" alt="Passo 1">
                     </div>
                   
                     <div class="mySlides fade">
-                      <img src="../assets/Passo-02.png" style="width:100%">
+                      <img src="../assets/Passo-02.png" style="width:100%" alt="Passo 2">
                     </div>
                   
                     <div class="mySlides fade">
-                      <img src="../assets/Passo-03.png" style="width:100%">
+                      <img src="../assets/Passo-03.png" style="width:100%" alt="Passo 3">
                     </div>
     
                     <div class="mySlides fade">
-                        <img src="../assets/Passo-04-1.png" style="width:100%">
-                      </div>
+                        <img src="../assets/Passo-04-1.png" style="width:100%" alt="Passo 4">
+                    </div>
                   
-                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
-                  </div>
-                  <br>
-                  
+                    <a class="prev" onclick="plusSlides(-1)" aria-label="Slide anterior">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)" aria-label="Próximo slide">&#10095;</a>
+                </div>
+                <br>
+            
                   <!-- The dots/circles -->
-                  <div class="dots" style="text-align:center">
+                <div class="dots" style="text-align:center">
                     <span class="dot" onclick="currentSlide(1)"></span>
                     <span class="dot" onclick="currentSlide(2)"></span>
                     <span class="dot" onclick="currentSlide(3)"></span>
                     <span class="dot" onclick="currentSlide(4)"></span>
-                  </div>
+                </div>
 
                 <p class="howItWorksText">Quer a <strong>experiência de sócio</strong>, ganhar 
                     <strong>comissões rápidas </strong>
@@ -88,85 +96,87 @@
                 </p>
             </div>
 
-            <div class="indiqueEGanhe">
-                <div class="containerLeft">
-    
-                </div>
+            <div class="referContainer" id="indicate">
+                <div class="containerLeft"></div>
                 <div class="containerRight">
-                    <h1>Sócio Influencer</h1>
-                    <p>Já tem uma comunidade de seguidores? Temos um plano especial feito só pra você. No Sócio Influencer você ganha uma comissão sempre que um indicado faz seu depósito na plataforma e ainda garante uma participação nos lucros da casa. </p>
-
-                    <button class="button">Saiba mais sobre o plano!</button>
-                </div>
-            </div>
-
-            <div class="indiqueEGanhe">
-                <div class="containerLeft">
-    
-                </div>
-                <div class="containerRight">
-                    <h1>Sócio Influencer</h1>
-                    <p>Já tem uma comunidade de seguidores? Temos um plano especial feito só pra você. No Sócio Influencer você ganha uma comissão sempre que um indicado faz seu depósito na plataforma e ainda garante uma participação nos lucros da casa. </p>
-
-
-                <button class="button">Saiba mais sobre o plano!</button>
-                </div>
-            </div>
-
-            <div class="indiqueEGanhe">
-                <div class="containerLeft">
-    
-                </div>
-                <div class="containerRight">
-                    <h1>Sócio Influencer</h1>
-                    <p>Já tem uma comunidade de seguidores? Temos um plano especial feito só pra você. No Sócio Influencer você ganha uma comissão sempre que um indicado faz seu depósito na plataforma e ainda garante uma participação nos lucros da casa. </p>
-
-
-                <button class="button">Saiba mais sobre o plano!</button>
-                </div>
-            </div>
-
-
-            <div class="topSocios">
-                <div class="sociosImgs">   
-                    <div>
-                        <h2 class="top3SociosTxt">TOP 3 <span style="color: #CCE071;">SÓCIOS 7G</span> DO MÊS</h2>
-                        <img src="../assets//toni-1.png" alt="">
-                        <img src="../assets//toni-1.png" alt="">
-                        <img src="../assets//toni-1.png" alt="">
+                    <div id="background">
                     </div>
-                   
+                    <h1>Indique e ganhe</h1>
+                    <p>Sempre que alguém que se cadastrou pelo seu link fizer a sua efetivação na plataforma você ganha a sua comissão. 
+                        <strong>Simples assim.</strong>
+                    </p>
+
+                    <a href="https://socio.7games.bet/indique-e-ganhe/"><button class="button">Saiba mais sobre o plano!</button></a>
+                </div>
+            </div>
+
+            <div class="referContainer" id="patner7G">
+                <div class="containerLeft"></div>
+                <div class="containerRight">
+                    <div id="background">
+                    </div>
+                    <h1>Sócio 7G</h1>
+                    <p>Mais do que ganhar uma comissão pelos indicados 
+                        <strong>você quer ter a experiência de sócio e participar dos resultados da 7Games?</strong>
+                    </p>
+                    <p>No Sócio 7G sempre que um indicado se efetivar na plataforma você ganha sua comissão, mas você também tem 
+                        <strong>participação nos resultados das apostas deles.</strong>
+                    </p>
+
+                    <a href="https://socio.7games.bet/socio-afiliados-7games/"><button class="button">Saiba mais sobre o plano!</button></a>
+                </div>
+            </div>
+
+            <div class="referContainer" id="patnerInfluence">
+                <div class="containerLeft"></div>
+                <div class="containerRight">
+                    <div id="background">
+                    </div>
+                    <h1>Sócio Influencer</h1>
+                    <p><strong>Já tem uma comunidade de seguidores?</strong> Temos um plano especial feito só pra você. No Sócio Influencer 
+                        <strong>você ganha uma comissão sempre que um indicado faz seu depósito</strong> na plataforma e ainda garante uma
+                        <strong>participação nos lucros da casa.</strong>
+                    </p>
+
+                    <a href="https://socio.7games.bet/socio-influencer/"><button class="button">Saiba mais sobre o plano!</button></a>
+                </div>
+            </div>
+
+            <div class="topPartners">
+                <div class="patnersImgs">   
+                        <h2 class="top3SociosTxt">TOP 3 <strong><span style="color: #CCE071;">SÓCIOS 7G</span></strong> DO MÊS</h2>
+                        <img src="../assets/toni-1.png" alt="foto Socio Top 1">
+                        <img src="../assets/jorge-oliveira.png" alt="oto Socio Top 2">
+                        <img src="../assets/drope.png" alt="oto Socio Top 3">
                 </div>
 
-                <div class="topSociosText">
-                    <h1>Coloque o seu nome <br>
-                    no Ranking!</h1>
+                <div class="topPartnersText">
+                    <h1>Coloque o seu nome <br>no Ranking!
+                    </h1>
 
                     <p>
                         Os melhores sócios da Plataforma recebem prêmios mensais e condições exclusivas. <br>
-                        O que você está esperando? Faça sua inscrição e leve seu nome até o topo do ranking!
+                        O que você está esperando? <strong>Faça sua inscrição e leve seu nome até o topo do ranking!</strong>
                     </p>
 
-                    <button class="button">Quero me inscrever!</button>
+                    <a href="#indicate"><button class="button">Quero me inscrever!</button></a>
                 </div>
             </div>
         </section>
     </main>
-
     <hr>
-
     <footer class="footer">
         <div>
-            <h1 class="ajuda">PRECISA DE AJUDA?</h1>
-            <span><strong>©2023</strong> – 7games.bet – Todos os direitos reservados</span>
+            <h1 class="help">PRECISA DE AJUDA?</h1>
+
+            <a href="https://ajuda.7games.bet/"><button class="button">FALE COM O SUPORTE</button></a>
         </div>
 
-        <div>   
-            <button class="button">FALE COM O SUPORTE</button>
-        </div>
+        <span><strong>©2023</strong> – 7games.bet – Todos os direitos reservados</span>
     </footer>
 
-
+    <!-- SCRIPTS -->
+    <script src="../javascript/animation3DTilt.js"></script>
     <script src="../javascript/main.js"></script>
 </body>
 </html>

@@ -1,5 +1,17 @@
+const btnToggle = document.getElementById('toggleMenu');
+
+function toggleMenu()
+{
+    const nav = document.getElementById('nav');
+    nav.classList.toggle('active');
+}
+
+btnToggle.addEventListener('click', toggleMenu);
+
+
 let slideIndex = 0;
 showSlides(slideIndex);
+autoSlide();
 
 // Next/previous controls
 function plusSlides(n) {
@@ -14,46 +26,54 @@ function currentSlide(n) {
 function showSlides(n) {
   let i;
   let slides = document.getElementsByClassName("mySlides");
-  console.log(slides)
-  
   let dots = document.getElementsByClassName("dot");
-//   if (n > slides.length) {slideIndex = 1}
-    //if (n < 1) {slideIndex = slides.length}
+  if (n >= slides.length) {slideIndex = 0}
+  if (n < 0) {slideIndex = slides.length - 1}
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
   }
   for (i = 0; i < dots.length; i++) {
     dots[i].className = dots[i].className.replace(" active", "");
   }
-  console.log(slides[slideIndex])
   slides[slideIndex].style.display = "block";
-
-
-  autoSlide();
+  if (dots.length > 0) {
+    dots[slideIndex].className += " active";
+  }
 }
 
-
-function autoSlide()
-{
-    let slides = document.getElementsByClassName("mySlides");
-
-    
-    setInterval(() => {
-
-        if(slideIndex >= slides.length-1)
-        {
-            console.log(slideIndex)
-            slideIndex = 0;
-        }
-
-        if(slideIndex === slides.length)
-        {
-            slides[slides.length].style.display = "none";
-        }
-        slides[slideIndex].style.display = "none";
-        console.log(slideIndex)
-        slideIndex++;
-        slides[slideIndex].style.display = "block";        
-      }, 2000)
-
+function autoSlide() {
+  setInterval(() => {
+    slideIndex++;
+    if (slideIndex >= document.getElementsByClassName("mySlides").length) {
+      slideIndex = 0;
+    }
+    showSlides(slideIndex);
+  }, 5000);
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+  const styles = {
+    visible: 'visible',
+    hidden: 'hidden'
+  };
+
+const intersectionObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add(styles.visible);
+        entry.target.classList.remove(styles.hidden);
+        intersectionObserver.unobserve(entry.target);
+      }
+    });
+  });
+
+  const indique = document.querySelectorAll('.referContainer');
+  const socios = document.querySelectorAll('.patnersImgs');
+  const sociosText = document.querySelectorAll('.topPartnersText')
+  const items = [...indique, ...socios, ...sociosText]
+
+  items.forEach((item) => {
+    item.classList.add(styles.hidden);
+    intersectionObserver.observe(item);
+  });
+});
