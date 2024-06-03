@@ -37,10 +37,13 @@ body {
     font-family: "Exo", sans-serif;
     color: white;
     background-color: black;
-    background-image: linear-gradient(to bottom, transparent 0%, #000000 10%), 
+    background-image: linear-gradient(to bottom, transparent 0%, #000000f2 20%), 
     url(../assets/Green-Wall-scaled.jpg);
+    background-size: 100% 50vh;   
+
     background-repeat: no-repeat;
-    background-size:contain;
+    background-position: top;
+
 }
 
 main {
@@ -166,13 +169,6 @@ p {
     justify-content: center;
 }
 
-.howItWorksText {
-    text-align: center;
-    line-height: 120%;
-    max-width: 1060px;
-    font-size: 35px;
-    font-weight: 200;
-}
 
 .referContainer {
     /* height: 500px; */
@@ -323,6 +319,10 @@ hr {
     .logo {
         margin-left: 40px;
     }
+
+    .containerRight h1{
+        font-size: 32px;
+    }
 }
 
 @media screen and (max-width: 1000px) {
@@ -390,9 +390,9 @@ hr {
     .containerRight {
         position: relative;
         z-index: 1;
-        width: 80%;
+        width: 100%;
         text-align: center;
-        align-items: center;
+        /* align-items: center; */
         margin: 0;
         padding: 0;
     }
@@ -414,6 +414,14 @@ hr {
     {
         main{
             padding: 0 10px;
+        }
+
+        .header{
+           padding: 20px;
+        }
+
+        .logo{
+            margin: 0;
         }
 
         .homeTextContainer {
@@ -517,6 +525,15 @@ hr {
             width: 90%;
         }
 
+        .containerRight{
+            padding: 0 10px;
+            gap: 12px;
+        }
+
+        .containerRight button{
+            margin-bottom: 16px;
+        }
+
         .containerRight h1{
             font-size: 26px;
         }
@@ -532,22 +549,6 @@ hr {
 
         .registerBtn{
             display: none;
-        }
-
-        .howItWorksText{
-            font-size: 24px;
-        }
-
-        .patnersImgs {
-            width: 90%;
-        }
-        
-        .patnersImgs img {
-            width: 100%;
-            max-width: 680px;
-            height: auto;
-            margin-bottom: 10px;
-            object-fit: contain;
         }
     }
     
