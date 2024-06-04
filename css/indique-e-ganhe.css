@@ -37,7 +37,7 @@ body {
     font-family: "Exo", sans-serif;
     color: white;
     background-color: black;
-    background-image: linear-gradient(to bottom, transparent 0%, #000000f2 20%), 
+    background-image: linear-gradient(to bottom, transparent 0%, #000000dd 20%), 
     url(../assets/Green-Wall-scaled.jpg);
     background-size: 100% 50vh;   
 
@@ -326,7 +326,6 @@ hr {
 }
 
 @media screen and (max-width: 1000px) {
- 
     .topPartners {
         margin: 0;
         display: flex;
@@ -373,10 +372,13 @@ hr {
         /* background-image: url('../assets/Mobile-Indique.png'); */
         /* background-size: cover;
         background-position: center; */
-        border-radius: 2%;
         margin-top: 20px;
         border-style: solid;
         overflow: hidden;
+    }
+
+    #Influencer{
+        background: linear-gradient(45deg, #000000f3, #000000f3), url('../assets/Influencer-Mobile.png');
     }
 
     .patner7G{
@@ -384,6 +386,7 @@ hr {
     }
     
     .patnerInfluence{
+
         background-image: url('../assets/Influencer-Mobile.png');
     }
 
@@ -407,6 +410,10 @@ hr {
         height: 100%;
         width: 100vw;
         background-color: #000000c8;
+    }
+
+    p{
+        line-height: 24px;
     }
 
 }

@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const windowCenterX = width / 2;
         const windowCenterY = height / 2;
   
-        const maxTilt = 20;// Maximum tilt angle
+        const maxTilt = 20; // Maximum tilt angle
 
         const transformedX = (y - windowCenterY) / windowCenterY * maxTilt;
         const transformedY = (x - windowCenterX) / windowCenterX * maxTilt;

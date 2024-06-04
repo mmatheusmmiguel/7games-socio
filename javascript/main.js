@@ -8,14 +8,14 @@ function toggleMenu()
 
 btnToggle.addEventListener('click', toggleMenu);
 
-
 let slideIndex = 0;
 showSlides(slideIndex);
-autoSlide();
 
 // Next/previous controls
 function plusSlides(n) {
-  showSlides(slideIndex += n);
+  showSlides(slideIndex += n)
+  clearInterval(autoSlideInterval);
+  autoSlideInterval = setInterval(autoSlides, 5000);
 }
 
 // Thumbnail image controls
@@ -41,15 +41,14 @@ function showSlides(n) {
   }
 }
 
-function autoSlide() {
-  setInterval(() => {
+const autoSlides = function() {
     slideIndex++;
     if (slideIndex >= document.getElementsByClassName("mySlides").length) {
       slideIndex = 0;
     }
     showSlides(slideIndex);
-  }, 5000);
 }
+
 
 document.addEventListener('DOMContentLoaded', () => {
   const styles = {
@@ -77,3 +76,5 @@ const intersectionObserver = new IntersectionObserver((entries) => {
     intersectionObserver.observe(item);
   });
 });
+
+let autoSlideInterval = setInterval(autoSlides, 5000);
